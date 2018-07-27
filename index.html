@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			/*.main{
+				box-shadow:20px 20px 50px #666
+			}*/
+			.cube{
+				width: 400px;
+				height: 400px;
+				margin: 0 auto;
+				margin-top: 450px;
+				position: relative;
+				transform-style: preserve-3d;
+				transition: all 5s;
+				
+			}
+			.cube div{
+				width: 400px;
+				height: 400px;
+				border: 1px solid #CCCCCC;
+				background-size: 100% 100%;
+				position:absolute;
+				opacity: 0.6;
+				transform-style: preserve-3d;
+				/*overflow: hidden;*/
+				transition: all 5s;
+			}
+			
+			
+			.front{
+				background-image: url(helloword/img/1.jpg);
+				transform: rotateZ(45deg) rotateX(45deg) rotateY(45deg) translateZ(200px);
+			}
+			.back{
+				background-image: url(2018_7_26/img/head.jpg);
+				transform:rotateZ(45deg) rotateX(45deg) rotateY(45deg)  rotateY(180deg) translateZ(200px);;
+			}
+			.top{
+				background-image: url(helloword/img/20.jpg);
+				transform: rotateZ(45deg) rotateX(45deg) rotateY(45deg) rotateX(-90deg) translateZ(200px);
+			}
+			.bottom{
+				background-image: url(helloword/img/6.jpg);
+				transform:rotateZ(45deg) rotateX(45deg) rotateY(45deg) rotateX(90deg) translateZ(200px);
+			}
+			.left{
+				background-image: url(helloword/img/4.jpg);
+				transform:rotateZ(45deg) rotateX(45deg) rotateY(45deg) rotateY(90deg) translateZ(200px);
+			}
+			.right{
+				background-image: url(helloword/img/11.jpg);
+				transform:rotateZ(45deg) rotateX(45deg) rotateY(45deg) rotateY(-90deg) translateZ(200px);
+			}
+			
+			.main:hover .cube{
+				/*transform-origin: center bottom;*/
+				transform:rotate3d(0,1,0,360deg) ;
+			}
+			.main:hover .front{
+				transform: translateX(-700px) translateY(0px);
+			}
+			.main:hover .left{
+				transform: translateX(-700px) translateY(-400px) ;
+			}
+			.main:hover .right{
+				transform: translateX(700px) translateY(0px) ;
+			}
+			.main:hover .bottom{
+				transform: translateX(700px) translateY(-400px) ;
+			}
+			.main:hover .top{
+				transform: translateY(-400px) ;
+			}
+			.main:hover .back{
+				transform: translateZ(200px) ;
+			
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="cube">
+				<div class="front"></div>
+				<div class="back"></div>
+				<div class="left"></div>
+				<div class="right"></div>
+				<div class="top"></div>
+				<div class="bottom"></div>
+			</div>
+		</div>
+	</body>
+</html>
